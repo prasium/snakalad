@@ -1,0 +1,38 @@
+
+.menu-box-container {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.header-title {
+    color: #FFE66D;
+    margin: 1em;
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.menu-box {
+    width: 75vw; /* Adjust as needed */
+    height: 50vh;
+    padding: 20; /* Adjust as needed */
+    background-color: #282426a5; /* Adjust as needed */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 10px; /* Adjust for desired roundness */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu-title {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    color: wheat;
+}

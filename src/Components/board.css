@@ -1,0 +1,75 @@
+ 
+  .board-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+
+.board {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 10px auto;
+    border: 4px solid #32E0C4; /* Electric blue border */
+  }
+
+
+ 
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    background-color: #1D1A39; /* Deep purple */
+    color: #FFE66D; /* Light yellow number */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #32E0C4;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+  }
+
+  .player-info {
+    width: auto;
+    font-family: 'Press Start 2P';
+    font-size: 1.6rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0em 1em;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+
+  .player-legend {
+    margin: 2em;
+    font-family: 'Press Start 2P';
+    font-size: 2rem;
+    color:  #FFE66D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .player-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dice {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: 0em 1em;
+  }
+
+  .player-item {
+    font-size: 12px;
+    padding: 0;
+  }

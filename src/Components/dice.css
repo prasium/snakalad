@@ -1,0 +1,57 @@
+.dice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    font-size: 3rem;
+  }
+  
+  .dice-face {
+    width: 100px;
+    height: 100px;
+    background-color: #00ffff; /* Electric blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    border: 4px solid #0ff;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+  }
+  
+  .dice-face.rolling {
+    animation: shake 1s infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .roll-dice-button {
+    background-color: #00ffff;
+    font-family: 'Press Start 2P';
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .roll-dice-button:hover {
+    background-color: #00ccff;
+  }
+  
+  .roll-dice-button:disabled {
+    background-color: #a0e9ff;
+    cursor: not-allowed;
+  }
+  

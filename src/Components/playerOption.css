@@ -1,0 +1,28 @@
+/* ElectricButton.css */
+
+.player-option-button {
+    background-color: #32E0C4; /* Electric Blue */
+    color: #1D1A39; /* Deep purple text */
+    border: 2px solid #00FFFF; /* Bright cyan border */
+    font-family: 'Press Start 2P', cursive; /* Optional retro font */
+    font-size: 14px;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px #00FFFF, 0 0 16px #00FFFF; /* Electric glow */
+    margin: 0px 10px;
+    margin-bottom: 20px;
+  }
+  
+  .player-option-button:hover {
+    background-color: #00FFFF; /* Brighter on hover */
+    color: #1D1A39;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #00FFFF, 0 0 24px #00FFFF;
+  }
+  

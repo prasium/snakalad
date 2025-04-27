@@ -1,0 +1,14 @@
+.cell-players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .player-token {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 1px;
+  }
+  
