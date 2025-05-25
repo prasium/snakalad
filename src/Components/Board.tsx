@@ -27,7 +27,6 @@ const Board: React.FC = () => {
   const laddersMap = getLaddersMap();
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
   const [players, setPlayers] = useState<Player[]>(initPlayers);
-  const tilePositions = new Map<number, { x: number, y: number }>();
   
   const generateBoard = () => {
     const cells = [];
@@ -35,8 +34,10 @@ const Board: React.FC = () => {
       const rowCells = [];
       for (let col = 0; col < 10; col++) {
         const number = row * 10 + (row % 2 === 0 ? col + 1 : 10 - col);
+        const isSnakePt = number in snakesMap;
+        const isLadderPt = number in laddersMap;
         rowCells.push(  
-          <Cell key={number} number={number} players={players} />
+          <Cell key={number} number={number} players={players} isSnakePt={isSnakePt} isLadderPt={isLadderPt} snakeTo={snakesMap[number]} ladderTo={laddersMap[number]}/>
         );
       }
       cells.push(
@@ -54,7 +55,11 @@ const Board: React.FC = () => {
       const player = updated[currentPlayerIndex];
   
       let nextPos = player.position + steps;
-      if (nextPos > 100) nextPos = 100; // Don't go beyond 100
+      console.log(nextPos, player.position, steps);
+
+      if (nextPos > 100) { 
+        nextPos = player.position; // Don't go beyond 100
+      }
   
       // Snake or Ladder check
       nextPos = applySnakeOrLadder(snakesMap, laddersMap, nextPos);
@@ -68,10 +73,10 @@ const Board: React.FC = () => {
   };
   
 
-  const rollDice = () => {
-      const roll = Math.floor(Math.random() * 6) + 1;
-      console.log(`Player rolled: ${roll}`);
+  const rollDice = (roll:number) => {
+    if(roll) {
       movePlayer(roll);
+    }
     };
   
     return (
@@ -105,6 +110,10 @@ const Board: React.FC = () => {
         <div className='dice'>
           <Dice onRoll={rollDice}/>
         </div>
+        <button className="home-btn" onClick={()=> {
+           void navigate('/');
+        }}>Reset</button>
+        
       </div>
     );
   };

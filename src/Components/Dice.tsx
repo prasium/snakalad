@@ -23,6 +23,7 @@ const Dice: React.FC<DiceProps> = ({ onRoll }) => {
       setDiceNumber(finalRoll);
       setIsRolling(false);
       onRoll(finalRoll); // Notify parent
+      console.log(finalRoll);
     }, 1000); // 1 second animation
   };
 

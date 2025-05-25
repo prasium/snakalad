@@ -73,3 +73,17 @@
     font-size: 12px;
     padding: 0;
   }
+
+  .home-btn {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 12px;
+    background-color: #00ffff;
+    border-radius: 5px;
+    height: 50px;
+    width: 80px;
+    justify-content: end;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+  }

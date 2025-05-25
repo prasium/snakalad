@@ -1,5 +1,5 @@
 
-export const getSnakesMap = ()=> {
+export const getSnakesMap = (): Record<number, number> => {
     const snakes = {
         16: 6,
         48: 26,
@@ -11,7 +11,7 @@ export const getSnakesMap = ()=> {
       return snakes;
 }
 
-export const getLaddersMap = ()=> {
+export const getLaddersMap = (): Record<number, number> => {
     const ladders = {
         2: 38,
         7: 14,
@@ -21,7 +21,7 @@ export const getLaddersMap = ()=> {
         36: 44,
         51: 67,
         71: 91,
-        78: 98,
+        77: 98,
         87: 94,
       };
     return ladders;     
@@ -51,7 +51,7 @@ export const getPlayersInit = (size: number):
         id: i,
         color: colors[i-1],
         position: 1,
-        token: playerToken[i-1]
+        token: playerToken[i-1],
       });
     }
     return playersInitState;
